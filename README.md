@@ -9,7 +9,7 @@ Start by adding the dependency
     </repository>
 </repositories>
 ```
-Dependency
+
 ```xml
 <dependency>
     <groupId>com.github.Danylo79</groupId>
