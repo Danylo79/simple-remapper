@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c753db3-e16d-41f1-9bd1-f1bc10ff1c0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.tsrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/namespaced/NamespacedMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/namespaced/NamespacedMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/processor/MappingProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/reader/TinyReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/util/ConverterUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/MappingWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/MappingWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/TsrgWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/TsrgWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/namespaced/NamespacedMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/namespaced/NamespacedMapping.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/processor/MappingProcessor$MappingProcessorReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/processor/MappingProcessor$MappingProcessorWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/processor/MappingProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/reader/TinyReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/util/ConverterUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/MappingWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/MappingWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/TsrgWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/TsrgWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.mapping" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,26 +51,6 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20114942" />
-  </component>
-  <component name="RunManager">
-    <configuration name="TsrgWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.dankom.sremapper.writer.TsrgWriter" />
-      <module name="simple-remapper" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.dankom.sremapper.writer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.TsrgWriter" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

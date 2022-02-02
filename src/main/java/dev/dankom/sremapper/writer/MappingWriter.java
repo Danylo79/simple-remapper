@@ -12,8 +12,6 @@ import dev.dankom.sremapper.mapping.paired.PairedMethodMapping;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
@@ -21,31 +19,6 @@ import java.util.concurrent.locks.ReentrantLock;
 public abstract class MappingWriter<T extends Mapping> {
     private List<String> buf = new ArrayList<>();
     private final ReentrantLock lock = new ReentrantLock();
-
-    private void ensurePackageGenerator() {
-        if (!(getGenerator() instanceof PackageMappingGenerator))
-            throw new UnsupportedOperationException("This type of mapping doesn't support package mappings");
-    }
-
-    public void writePairedPackage(PairedMapping pkg) {
-        ensurePackageGenerator();
-
-        if (getGenerator().isPaired()) {
-            synchronized (buf) {
-                buf.add(((PackageMappingGenerator) getGenerator()).generatePackage(pkg));
-            }
-        }
-    }
-
-    public void writeNamespacedPackage(NamespacedMapping pkg) {
-        ensurePackageGenerator();
-
-        if (getGenerator().isNamespaced()) {
-            synchronized (buf) {
-                buf.add(((PackageMappingGenerator) getGenerator()).generatePackage(pkg));
-            }
-        }
-    }
 
     public void writePairedMappings(List<PairedClassMapping> mapping) {
         mapping.forEach(pcm -> writePairedMapping(pcm));
@@ -55,14 +28,10 @@ public abstract class MappingWriter<T extends Mapping> {
         if (shouldLock()) lock.lock();
 
         if (getGenerator().isPaired()) {
-            try {
-                synchronized (buf) {
-                    buf.add(getGenerator().asPaired().generateClass(pcm));
-                    pcm.getFields().parallelStream().map(getGenerator().asPaired()::generateField).forEach(field -> buf.add(field));
-                    pcm.getMethods().parallelStream().map(getGenerator().asPaired()::generateMethod).forEach(method -> buf.add(method));
-                }
-            } finally {
-                if (shouldLock()) lock.lock();
+            synchronized (buf) {
+                buf.add(getGenerator().asPaired().generateClass(pcm));
+                pcm.getFields().parallelStream().map(getGenerator().asPaired()::generateField).forEach(field -> buf.add(field));
+                pcm.getMethods().parallelStream().map(getGenerator().asPaired()::generateMethod).forEach(method -> buf.add(method));
             }
         }
     }
@@ -72,17 +41,11 @@ public abstract class MappingWriter<T extends Mapping> {
     }
 
     public void writeNamespacedMapping(NamespacedClassMapping ncm) {
-        if (shouldLock()) lock.lock();
-
-        if (getGenerator().isPaired()) {
-            try {
-                synchronized (buf) {
-                    buf.add(getGenerator().asNamespaced().generateClass(ncm));
-                    ncm.getFields().parallelStream().map(getGenerator().asNamespaced()::generateField).forEach(field -> buf.add(field));
-                    ncm.getMethods().parallelStream().map(getGenerator().asNamespaced()::generateMethod).forEach(method -> buf.add(method));
-                }
-            } finally {
-                if (shouldLock()) lock.lock();
+        if (getGenerator().isNamespaced()) {
+            synchronized (buf) {
+                buf.add(getGenerator().asNamespaced().generateClass(ncm));
+                ncm.getFields().parallelStream().map(getGenerator().asNamespaced()::generateField).forEach(field -> buf.add(field));
+                ncm.getMethods().parallelStream().map(getGenerator().asNamespaced()::generateMethod).forEach(method -> buf.add(method));
             }
         }
     }
@@ -140,9 +103,5 @@ public abstract class MappingWriter<T extends Mapping> {
         String generateField(NamespacedFieldMapping mapping);
 
         String generateMethod(NamespacedMethodMapping mapping);
-    }
-
-    interface PackageMappingGenerator {
-        String generatePackage(Mapping mapping);
     }
 }
