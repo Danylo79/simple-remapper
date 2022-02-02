@@ -14,19 +14,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.locks.ReentrantLock;
 
 public abstract class MappingWriter<T extends Mapping> {
     private List<String> buf = new ArrayList<>();
-    private final ReentrantLock lock = new ReentrantLock();
 
     public void writePairedMappings(List<PairedClassMapping> mapping) {
         mapping.forEach(pcm -> writePairedMapping(pcm));
     }
 
     public void writePairedMapping(PairedClassMapping pcm) {
-        if (shouldLock()) lock.lock();
-
         if (getGenerator().isPaired()) {
             synchronized (buf) {
                 buf.add(getGenerator().asPaired().generateClass(pcm));
