@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c753db3-e16d-41f1-9bd1-f1bc10ff1c0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/ClassMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.tsrg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/namespaced/NamespacedClassMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/namespaced/NamespacedClassMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/paired/PairedClassMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/mapping/paired/PairedClassMapping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/processor/MappingProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/processor/MappingProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/MappingWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/MappingWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/TsrgWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/dankom/sremapper/writer/TsrgWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/namespaced/NamespacedClassMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/namespaced/NamespacedClassMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/paired/PairedClassMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/mapping/paired/PairedClassMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/MappingWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/MappingWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/TsrgWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/dankom/sremapper/writer/TsrgWriter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,11 +38,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.dankom.sremapper.Main" />
+      <module name="simple-remapper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.dankom.sremapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -53,6 +68,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,5 +96,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
