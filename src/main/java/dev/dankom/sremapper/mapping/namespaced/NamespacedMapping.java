@@ -15,7 +15,7 @@ public abstract class NamespacedMapping implements Mapping {
     public static final String INTERMEDIARY = "intermediary";
     public static final String YARN = "named";
 
-    protected final Map<String, String> namespace = new HashMap<>();
+    public final Map<String, String> namespace = new HashMap<>();
 
     public NamespacedMapping(Map<String, String> namespace) {
         this.namespace.putAll(namespace);
