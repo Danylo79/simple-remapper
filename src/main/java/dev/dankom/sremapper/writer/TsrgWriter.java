@@ -2,6 +2,7 @@ package dev.dankom.sremapper.writer;
 
 import dev.dankom.sremapper.mapping.paired.PairedClassMapping;
 import dev.dankom.sremapper.mapping.paired.PairedFieldMapping;
+import dev.dankom.sremapper.mapping.paired.PairedMapping;
 import dev.dankom.sremapper.mapping.paired.PairedMethodMapping;
 
 import java.io.BufferedWriter;
@@ -9,7 +10,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 
-public class TsrgWriter extends MappingWriter<PairedClassMapping> {
+public class TsrgWriter extends MappingWriter<PairedMapping, PairedClassMapping> {
     public TsrgWriter(List<PairedClassMapping> mappings, File out) {
         super(mappings, out);
     }
